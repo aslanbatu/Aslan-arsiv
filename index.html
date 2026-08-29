@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#090909">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Aslan Arşiv">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
+  <title>Aslan Arşiv</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="appShell">
+    <header class="topbar">
+      <div class="brand">
+        <img src="assets/icon-180.png" alt="Aslan Arşiv" class="brandIcon">
+        <div><div class="brandName">ASLAN ARŞİV</div><div class="brandSub">Kişisel belge arşivin</div></div>
+      </div>
+      <button class="iconBtn" id="settingsBtn" aria-label="Ayarlar">⚙</button>
+    </header>
+
+    <main id="mainView"></main>
+
+    <nav class="bottomNav">
+      <button class="navBtn active" data-tab="home"><span>⌂</span><small>Ana Sayfa</small></button>
+      <button class="navBtn" data-tab="search"><span>⌕</span><small>Arama</small></button>
+      <button class="navBtn" data-tab="favorites"><span>☆</span><small>Favoriler</small></button>
+      <button class="navBtn" data-tab="settings"><span>⚙</span><small>Ayarlar</small></button>
+    </nav>
+    <button class="fab" id="addBtn" aria-label="Belge veya klasör ekle">＋</button>
+  </div>
+
+  <div class="modal hidden" id="modal"></div>
+  <div class="toast hidden" id="toast"></div>
+  <input id="filePicker" type="file" accept="application/pdf,image/*" multiple hidden>
+  <script src="app.js"></script>
+</body>
+</html>
